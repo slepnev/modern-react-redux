@@ -1,0 +1,19 @@
+{
+  "name": "modern-react-redux",
+  "version": "1.0.0",
+  "description": "Modenr React v16.6.3 and Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slepnev/modern-react-redux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slepnev/modern-react-redux/issues"
+  },
+  "homepage": "https://github.com/slepnev/modern-react-redux#readme"
+}
