@@ -61,3 +61,4 @@ typings/
 .next
 /jsx/node_modules/
 /.idea/
+/components/node_modules/

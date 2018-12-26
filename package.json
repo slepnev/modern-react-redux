@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/slepnev/modern-react-redux/issues"
   },
-  "homepage": "https://github.com/slepnev/modern-react-redux#readme"
+  "homepage": "https://github.com/slepnev/modern-react-redux#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }
