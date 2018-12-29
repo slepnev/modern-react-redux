@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 // const App = () => {
 //   window.navigator.geolocation.getCurrentPosition(
@@ -41,22 +43,31 @@ class App extends React.Component {
     console.log('My component was just update');
   }
 
-  // React says  we have to define render
-  render() {
-    console.log('render');
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return (
         <div>Error: {this.state.errorMessage}</div>
       );
     } else if (!this.state.errorMessage && this.state.lat) {
       return (
-        <div>Latitude: {this.state.lat}</div>
+        <SeasonDisplay lat={this.state.lat} />
       );
     } else {
       return (
-        <div>Loading!</div>
+        <Spinner message="Please accept location request" />
       );
     }
+  }
+
+  // React says  we have to define render
+  render() {
+    console.log('render');
+
+    return (
+      <div className="border red">
+        {this.renderContent()}
+      </div>
+    );
   }
 }
 
