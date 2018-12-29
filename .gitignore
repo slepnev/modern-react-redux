@@ -59,7 +59,7 @@ typings/
 
 # next.js build output
 .next
-/jsx/node_modules/
+/1-jsx/node_modules/
 /.idea/
-/components/node_modules/
-!/seasons/node_modules/
+/2-components/node_modules/
+!/3-seasons/node_modules/
