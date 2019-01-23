@@ -1,7 +1,7 @@
 console.clear();
 
 // People dropping off a from (Action Creators)
-const createPolice = (name, amount) => {
+const createPolicy = (name, amount) => {
   return {
     //  Action (a form in out analogy)
     type: 'CREATE_POLICY',
@@ -58,4 +58,27 @@ const policies = (listOfPolicies = [], action) => {
   } else if (action.type === 'DELETE_POLICY') {
     return listOfPolicies.filter(name => name !== action.payload.name);
   }
+
+  return listOfPolicies;
 };
+
+// Redux
+const { createStore, combineReducers } = Redux;
+
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimHistory: claimHistory,
+  policies: policies,
+});
+
+const store = createStore(ourDepartments);
+
+store.dispatch(createPolicy('Alex', 20));
+store.dispatch(createPolicy('Jim', 30));
+
+store.dispatch(createClaim('Alex', 120));
+store.dispatch(createClaim('Jim', 50));
+
+store.dispatch(deletePolicy('Jim'));
+
+console.log(store.getState());
