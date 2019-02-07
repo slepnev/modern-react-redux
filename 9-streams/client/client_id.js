@@ -1,2 +1,0 @@
-ClientID
-64765399693-sr3dd8q4d1euufefg4402bvli3qouold.apps.googleusercontent.com
